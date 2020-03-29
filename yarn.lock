@@ -779,7 +779,7 @@ ci-info@^1.5.0:
   resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-1.6.0.tgz#2ca20dbb9ceb32d4524a683303313f0304b1e497"
   integrity sha512-vsGdkwSCDpWmP80ncATX7iea5DWQemg1UgCW5J8tqjU3lYw4FBYuj89J0CTVomA7BEfvSZd84GmHko+MxFQU2A==
 
-class-validator@>=0.9.1:
+class-validator@0.11.1, class-validator@>=0.9.1:
   version "0.11.1"
   resolved "https://registry.yarnpkg.com/class-validator/-/class-validator-0.11.1.tgz#9033b9ebdc3883e826dfc0c545a45935e3298553"
   integrity sha512-6CGdjwJLmKw+sQbK5ZDo1v1yTajkqfPOUDWSYVIlhUiCh6Phy8sAnMFE2XKHAcKAdoOz4jJUQhjPQWPYUuHxrA==
