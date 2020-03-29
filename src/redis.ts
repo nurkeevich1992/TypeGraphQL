@@ -1,13 +1,12 @@
 import Redis from "ioredis";
-import sessionObj from "express-session";
+import session from "express-session";
 import connectRedis from "connect-redis";
 
-const redis = new Redis();
-const RedisStore = connectRedis(sessionObj);
+const RedisStore = connectRedis(session);
 
-export const session = sessionObj({
+export const redisSession = session({
     store: new RedisStore({
-        client: redis
+        client: new Redis()
     }),
     name: "qid",
     secret: "aslkdfjoiq12312", // TODO: put in evn file in future
