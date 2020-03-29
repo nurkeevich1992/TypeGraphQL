@@ -1,5 +1,5 @@
 import { MiddlewareFn } from "type-graphql";
-import MyContext from "src/types/MyContext";
+import MyContext from "../types/MyContext";
 
 /**
  * isAuth Middleware alternative to customAuthChecker,

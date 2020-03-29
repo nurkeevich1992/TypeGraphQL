@@ -22,8 +22,6 @@ class LoginResolver {
         }
 
         ctx.req.session!.userId = user.id;
-        console.log("session", ctx.req.session!.userId);
-
         return user;
     }
 }
