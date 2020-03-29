@@ -4,9 +4,11 @@ import connectRedis from "connect-redis";
 
 const RedisStore = connectRedis(session);
 
+export const redis = new Redis();
+
 export const redisSession = session({
     store: new RedisStore({
-        client: new Redis()
+        client: redis
     }),
     name: "qid",
     secret: "aslkdfjoiq12312", // TODO: put in evn file in future

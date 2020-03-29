@@ -29,6 +29,9 @@ class User extends BaseEntity {
     // database field (can not access on graphql)
     @Column()
     password: string;
+
+    @Column("boolean", { default: false })
+    confirmed: boolean;
 }
 
 export default User;
