@@ -1,6 +1,6 @@
 import bcrypt from "bcryptjs";
 import { Resolver, Arg, Mutation, Ctx } from "type-graphql";
-import { User } from "../../entity/User";
+import User from "../../entity/User";
 import MyContext from "../../types/MyContext";
 
 @Resolver()
@@ -21,7 +21,7 @@ class LoginResolver {
             return null;
         }
 
-        ctx.req.session!.userId = user.id; // save cookie as userId
+        ctx.req.session!.userId = user.id;
         console.log("session", ctx.req.session!.userId);
 
         return user;
