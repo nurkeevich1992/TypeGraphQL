@@ -1,6 +1,7 @@
 import Redis from "ioredis";
 import session from "express-session";
 import connectRedis from "connect-redis";
+import { Cookies } from "./constants/constants";
 
 const RedisStore = connectRedis(session);
 
@@ -10,7 +11,7 @@ export const redisSession = session({
     store: new RedisStore({
         client: redis
     }),
-    name: "qid",
+    name: Cookies.qid,
     secret: "aslkdfjoiq12312", // TODO: put in evn file in future
     resave: false,
     saveUninitialized: false,

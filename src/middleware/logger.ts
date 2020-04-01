@@ -10,7 +10,7 @@ import MyContext from "../types/MyContext";
  */
 
 const logger: MiddlewareFn<MyContext> = async (
-    { args, context, info, root },
+    { args }, // other available options:  context, info, root
     next
 ) => {
     console.log("args", args);

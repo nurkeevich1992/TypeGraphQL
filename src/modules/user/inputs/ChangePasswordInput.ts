@@ -1,12 +1,10 @@
 import { Field, InputType } from "type-graphql";
+import PasswordInput from "../../shared/PasswordInput";
 
 @InputType()
-class ChangePasswordInput {
+class ChangePasswordInput extends PasswordInput {
     @Field()
     token: string;
-
-    @Field()
-    password: string;
 }
 
 export default ChangePasswordInput;

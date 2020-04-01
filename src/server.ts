@@ -7,6 +7,7 @@ import customAuthChecker from "./helpers/customAuthChecker";
 import ConfirmUserResolver from "./modules/user/ConfirmUserResolver";
 import ForgotPasswordResolver from "./modules/user/ForgotPasswordResolver";
 import ChangePasswordResolver from "./modules/user/ChangePasswordResolver";
+import LogoutResolver from "./modules/user/LogoutResolver";
 
 const apolloServer = async () => {
     const schema = await buildSchema({
@@ -17,7 +18,8 @@ const apolloServer = async () => {
             LoginResolver,
             ConfirmUserResolver,
             ForgotPasswordResolver,
-            ChangePasswordResolver
+            ChangePasswordResolver,
+            LogoutResolver
         ]
     });
 

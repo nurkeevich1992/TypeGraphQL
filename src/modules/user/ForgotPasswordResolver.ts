@@ -3,7 +3,7 @@ import User from "../../entity/User";
 import { v4 as uuid } from "uuid";
 import { redis } from "../../redis";
 import sendEmail from "../../utils/sendEmail";
-import { Prefixes } from "../../constants/redisPrefixes";
+import { Prefixes } from "../../constants/constants";
 
 @Resolver()
 class ForgotPasswordResolver {

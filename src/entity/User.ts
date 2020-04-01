@@ -16,7 +16,6 @@ class User extends BaseEntity {
     @Column()
     lastName: string;
 
-    // only schema field (does not store data in database)
     @Field()
     name(@Root() { firstName, lastName }: User): string {
         return `${firstName} ${lastName}`;
@@ -26,7 +25,6 @@ class User extends BaseEntity {
     @Column("text", { unique: true })
     email: string;
 
-    // database field (can not access on graphql)
     @Column()
     password: string;
 
