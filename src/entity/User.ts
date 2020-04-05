@@ -1,12 +1,19 @@
-import { Entity, PrimaryGeneratedColumn, Column, BaseEntity } from "typeorm";
+import {
+    Entity,
+    PrimaryGeneratedColumn,
+    Column,
+    BaseEntity,
+    OneToMany
+} from "typeorm";
 import { ObjectType, Field, ID, Root } from "type-graphql";
+import Post from "./Post";
 
 @ObjectType()
 @Entity()
 class User extends BaseEntity {
     @Field(() => ID)
     @PrimaryGeneratedColumn()
-    id: number;
+    readonly id: number;
 
     @Field()
     @Column()
@@ -30,6 +37,9 @@ class User extends BaseEntity {
 
     @Column("boolean", { default: false })
     confirmed: boolean;
+
+    @OneToMany(type => Post, photo => photo.user)
+    posts: Post[];
 }
 
 export default User;
